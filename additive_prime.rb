@@ -29,7 +29,6 @@ class FindsIfAdditive
 
 	def find_prime_combos
 		a = 0
-		@list_of_prime_combos = Array.new
 		while a < @list_of_primes.length do
 			b = a + 1
 			until b == @list_of_primes.length do
