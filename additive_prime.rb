@@ -2,6 +2,7 @@ require 'prime' # imports prime num methods
 require_relative 'secret_function' # imports secret function black box
 # to call secret linear additive function:
 # secret(n)
+
 # to call secret function that will NOT be linear:
 # not_secret(n)
 
@@ -23,9 +24,17 @@ class FindsIfAdditive
 	end
 
 	def find_if_additive(x, y)
-			unless secret(x+y) == secret(x) + secret(y)
-				
-				puts "this is NOT additive"
+			if secret(x+y) == secret(x) + secret(y)
+				@additive = true
+				# i need a method that will check all instances
+				# and break program if any are false
+			else
+				# I'm back to finding a simple break method
+				# ruby doesnt like the
+				# break
+				# method i keep trying to give it.
+				@additive = false
+					puts "this is NOT additive"
 			end
 	end
 
@@ -48,19 +57,3 @@ class FindsIfAdditive
 end
 
 FindsIfAdditive.new
-
-
-# # print list_of_primes
-# # 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 for primes less than 30
-
-
-
-# print @list_of_prime_combos
-
-# # puts secret(n)
-# # puts secret(n+1)
-# # if secret(n) < secret(n+1)
-# # 	puts "This will always be bigger"
-# # else
-# # 	puts "you should not be seeing this. you done goofed"
-# # end
