@@ -8,9 +8,8 @@ require_relative 'secret_function' # imports secret function black box
 
 class FindsIfAdditive
 	def initialize
-		puts "Please input integer"
+		puts "Please input integer that primes will not exceed"
 		@n = gets.chomp.to_i
-		puts "you want primes less than #{@n}"
 		find_primes_less_than(@n)
 		find_prime_combos
 	end
@@ -20,13 +19,12 @@ class FindsIfAdditive
 		Prime.each(n) do |prime|
 			@list_of_primes << prime
 		end
-		# print @list_of_primes
 	end
 
 	def find_if_additive(x, y)
-			unless so_totally_not_secret(x+y) == so_totally_not_secret(x) + so_totally_not_secret(y)
-				abort("this is NOT additive")
-			end
+		unless secret(x+y) == secret(x) + secret(y)
+			abort("The secret method is NOT additive")
+		end
 	end
 
 	def find_prime_combos
@@ -41,8 +39,7 @@ class FindsIfAdditive
 			a += 1
 		end
 		puts "Hurray! We made it through the checker."
-		puts "That means the secret function is Additive!"
-		#print @list_of_prime_combos
+		puts "That means the secret function is additive!"
 	end
 
 end
