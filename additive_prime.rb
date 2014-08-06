@@ -24,17 +24,8 @@ class FindsIfAdditive
 	end
 
 	def find_if_additive(x, y)
-			if secret(x+y) == secret(x) + secret(y)
-				@additive = true
-				# i need a method that will check all instances
-				# and break program if any are false
-			else
-				# I'm back to finding a simple break method
-				# ruby doesnt like the
-				# break
-				# method i keep trying to give it.
-				@additive = false
-					puts "this is NOT additive"
+			unless so_totally_not_secret(x+y) == so_totally_not_secret(x) + so_totally_not_secret(y)
+				abort("this is NOT additive")
 			end
 	end
 
