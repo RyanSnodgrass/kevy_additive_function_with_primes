@@ -1,23 +1,16 @@
-require 'prime'
-require_relative 'secret_function'
+require 'prime' # imports prime num methods
+require_relative 'secret_function' # imports secret function black box
+# to call secret function:
+# secret(n)
 
 puts "Please input integer"
-@N = gets.chomp.to_i
-puts @N.class
+n = gets.chomp.to_i
+puts n.class
 
-area_51 = Secret.new(@N)
-area_52 = Secret.new(@N+1)
-puts area_51
-puts area_51.secret
-if area_51.secret < area_52.secret
-	puts "this will always be bigger"
+puts secret(n)
+puts secret(n+1)
+if secret(n) < secret(n+1)
+	puts "This will always be bigger"
 else
-	puts "This should never show up. you done goofed"
+	puts "you should not be seeing this. you done goofed"
 end
-
-
-# if Secret.new(@N) > Secret.new(4)
-# 	puts "your value is larger than mine"
-# else
-# 	puts "mines bigger!"
-# end
