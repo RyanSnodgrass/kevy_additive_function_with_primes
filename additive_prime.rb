@@ -4,7 +4,7 @@ require_relative 'secret_function' # imports secret function black box
 # secret(n)
 
 # to call secret function that will NOT be linear:
-# not_secret(n)
+# so_totally_not_secret(n)
 
 class FindsIfAdditive
 	def initialize
@@ -15,19 +15,20 @@ class FindsIfAdditive
 	end
 
 	def find_primes_less_than(n)
-		@list_of_primes = Array.new
-		Prime.each(n) do |prime|
-			@list_of_primes << prime
-		end
+		puts "Finding primes less than #{@n}."
+		@list_of_primes = Prime.each(n).to_a
+		puts "found primes #{@list_of_primes}"
+		puts "Done"
 	end
 
 	def find_if_additive(x, y)
 		unless secret(x+y) == secret(x) + secret(y)
-			abort("The secret method is NOT additive")
+			abort("The secret method is NOT additive.")
 		end
 	end
 
 	def find_prime_combos
+		puts "Now checking whether the secret function is additive."
 		a = 0
 		while a < @list_of_primes.length do
 			b = a + 1
