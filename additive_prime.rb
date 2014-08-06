@@ -1,7 +1,9 @@
 require 'prime' # imports prime num methods
 require_relative 'secret_function' # imports secret function black box
-# to call secret function:
+# to call secret linear additive function:
 # secret(n)
+# to call secret function that will NOT be linear:
+# not_secret(n)
 
 class FindsIfAdditive
 	def initialize
