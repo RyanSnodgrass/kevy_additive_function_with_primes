@@ -1,18 +1,18 @@
 require 'prime' # imports prime num methods
 require_relative 'secret_function' # imports secret function black box
-# to call secret linear additive function:
-# secret(n)
 
-# to call secret function that will NOT be linear additive:
-# so_totally_not_secret(n)
+# To call secret linear additive function:
+#  secret(n)
+# To call secret function that will NOT be linear additive:
+#  so_totally_not_secret(n)
 
 class FindsIfAdditive
 	# Upon creation of class instance:
-	#   First gets input from the terminal
-	#   Checks that for integer presence
-	#   Then runs the prime finder method
-	#   Then runs the method that builds unique combos
-	#   Finally tests combos for additive
+	# - First gets input from the terminal
+	# - Checks that for integer presence
+	# - Then runs the prime finder method
+	# - Then runs the method that builds unique combos
+	# - Finally tests combos against secret() for additive
 	def initialize
 		puts "Please input integer that primes will not exceed"
 		print ">>"
@@ -23,8 +23,7 @@ class FindsIfAdditive
 		test_prime_combos_for_additive
 	end
 
-	# Performs simple check to make sure the user is inputting
-	#   only integers
+	# Performs simple check to make sure the user is inputting only integers
 	def check_integer_input
 		until @n != nil do
 			puts "Please, just integers"
@@ -41,8 +40,7 @@ class FindsIfAdditive
 	end
 
 	# Finds combinations of primes from @list_of_primes
-	# Uses built-in ruby method .combination which finds
-	#   all unique combos of an array
+	# Uses built-in ruby method .combination which finds all unique combos of an array
 	def find_prime_combos
 		puts "Finding all unique combinations of primes."
 		@prime_combos = @list_of_primes.combination(2).to_a
@@ -50,10 +48,8 @@ class FindsIfAdditive
 	end
 
 	# Compares if additive passing two int (from test_prime_combos_for_additive)
-	# As long as each check remains true, program continues 
-	#   onto next check with next combo
-	# Upon first false - program informs user which prime combo failed
-	#  and terminates
+	# As long as each check remains true, program continues onto next check with next combo
+	# Upon first false - program informs user which prime combo failed and terminates
 	def check_if_additive(x, y)
 		unless secret(x+y) == secret(x) + secret(y)
 			puts "Uh oh"
