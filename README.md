@@ -23,7 +23,7 @@ In my program the 'secret()' function is in a seperate file labeled `secret_func
 
 --------
 
-For my part a lot of my work was cut out for me. Ruby comes with built-in support for prime number finding and factoring. That saved me a lot of time. Before I found the prime module I was looking up seives and sweating bullets. 
+For my part a lot of my work was cut out for me. Ruby comes with built-in support for prime number finding and factoring. That saved me a lot of time. 
 
 Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I was to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. I didn't want to waste memory brute-force checking each combination over and over. 
 
@@ -38,8 +38,11 @@ array.each do |a|
 end
 ```
 Which spits out
-```ruby
-[[1, 2], [1, 1], [1, 2], [1, 3], [1, 4], [2, 1], [2, 2], [2, 3], [2, 4], [3, 1], [3, 2], [3, 3], [3, 4], [4, 1], [4, 2], [4, 3], [4, 4]]
+```
+[[1, 2], [1, 1], [1, 2], [1, 3], [1, 4], 
+[2, 1], [2, 2], [2, 3], [2, 4], 
+[3, 1], [3, 2], [3, 3], [3, 4], 
+[4, 1], [4, 2], [4, 3], [4, 4]]
 ```
 We see we get a lot of redundant combos.
 
@@ -57,11 +60,17 @@ The code I came up with was
 	end
 ```
 
-Which worked pretty well. Then I found the .combination() method. 
+Which worked pretty well and gave
+```
+[[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+```
+
+Then I found the .combination() method. 
+
 ```ruby
 combos = array.combination(2).to_a
 ```
-Much better. 1 > 9 lines of code.
+And that method returns the same thing, but with only 1 line of code instead of 9. Love it.
 
 Documentation
 -----------

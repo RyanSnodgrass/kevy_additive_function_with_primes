@@ -54,7 +54,7 @@ class FindsIfAdditive
 	def check_if_additive(x, y)
 		unless secret(x+y) == secret(x) + secret(y)
 			puts "Uh oh"
-			puts "For Prime combo #{@iteration.join(" and ")}"
+			puts "For prime combo #{@iteration.join(" and ")}"
 			abort("The secret method has been proven NOT additive.")
 		end
 	end
