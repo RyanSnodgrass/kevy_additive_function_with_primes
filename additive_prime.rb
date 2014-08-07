@@ -14,6 +14,7 @@ class FindsIfAdditive
 	#   Finally tests for additive
 	def initialize
 		puts "Please input integer that primes will not exceed"
+		print ">>"
 		@n = gets.chomp.to_i
 		find_primes_less_than(@n)
 		find_prime_combos
@@ -31,7 +32,7 @@ class FindsIfAdditive
 	# Uses built-in ruby method .combination which finds
 	#   all unique combos of an array
 	def find_prime_combos
-		puts "Finding all unique combinations of primes"
+		puts "Finding all unique combinations of primes."
 		@prime_combos = @list_of_primes.combination(2).to_a
 		puts "Done"
 	end
@@ -39,23 +40,28 @@ class FindsIfAdditive
 	# Compares if additive passing two int (from test_prime_combos_for_additive)
 	# As long as each check remains true, program continues 
 	#   onto next check with next combo
-	# Upon first false - program terminates and informs user
+	# Upon first false - program informs user which prime combo failed
+	#  and terminates
 	def check_if_additive(x, y)
 		unless secret(x+y) == secret(x) + secret(y)
-			abort("The secret method is NOT additive.")
+			puts "Uh oh"
+			puts "For Prime combo #{@iteration.join(" and ")}"
+			abort("The secret method has been proven NOT additive.")
 		end
 	end
 
 	# For each prime combo - runs check_if_additive
 	# Passes in both values in the combo
+	# Saves iteration for error message in check_if_additive
 	# If all checks pass - success message displays and program terminates
 	def test_prime_combos_for_additive
 		puts "Now checking whether the secret function is additive."
 		@prime_combos.each do |a|
+			@iteration = a
 			check_if_additive(a[0], a[1])
 		end
 		puts "Hurray! We made it through the checker."
-		puts "That means the secret function is additive!"
+		puts "That means for all primes less than #{@n}: the secret function has been proven additive!"
 	end
 end
 
