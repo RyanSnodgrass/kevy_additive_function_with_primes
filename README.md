@@ -25,7 +25,7 @@ In my program the 'secret()' function is in a seperate file labeled `secret_func
 
 For my part a lot of my work was cut out for me. Ruby comes with built-in support for prime number finding and factoring. That saved me a lot of time. 
 
-Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I was to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. I didn't want to waste memory brute-force checking each combination over and over. 
+Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I were to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. I didn't want to waste memory brute-force checking each combination over and over. 
 
 For example I didn't want
 ```ruby
@@ -65,12 +65,16 @@ Which worked pretty well and gave
 [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
 ```
 
-Then I found the .combination() method. 
+Then I found the `.combination()` method. 
 
 ```ruby
 combos = array.combination(2).to_a
 ```
 And that method returns the same thing, but with only 1 line of code instead of 9. Love it.
+
+-------
+
+A little bit of extra I put in is upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass and aren't simple `y = mx` functions. Supposedly there are super smarty-pants mathematicians out there searching for non linear additive functions.
 
 Documentation
 -----------
