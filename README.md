@@ -19,13 +19,13 @@ Built for a job interview code test.
 
 Implementation
 ==========
-In my program the 'secret()' function is in a seperate file appropriately labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of additive_prime.rb and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
+###Switch Between `secret()` Functions
+In my program the `secret()` function is in a seperate file appropriately labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of `additive_prime.rb` and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
 
---------
-
+####Development
 For my part a lot of my work was cut out for me. Ruby comes with built-in support for prime number finding and factoring. That saved me a lot of time. 
 
-Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I were to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. I didn't want to waste memory brute-force checking each combination over and over. 
+Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I were to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. For that reason I didn't want to waste memory brute-force checking each combination over and over. 
 
 For example I didn't want
 ```ruby
@@ -74,7 +74,7 @@ And that method returns the same thing, but with only 1 line of code instead of 
 
 -------
 
-A little bit of extra I put in is upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass and aren't simple `y = mx` functions. Supposedly there are mathematicians out there searching for non linear additive functions.
+A little bit of extra I put in: upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass when they aren't simple `y = mx` functions. Supposedly there are mathematicians out there studying non linear additive functions.
 
 Documentation
 -----------
