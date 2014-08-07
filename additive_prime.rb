@@ -1,5 +1,5 @@
-require 'prime' # imports prime num methods
-require_relative 'secret_function' # imports secret function black box
+require 'prime' # Imports Prime methods
+require_relative 'secret_function' # Imports secret function black box
 
 # To call secret linear additive function:
 #  secret(n)
@@ -9,10 +9,10 @@ require_relative 'secret_function' # imports secret function black box
 class FindsIfAdditive
 	# Upon creation of class instance:
 	# - First gets input from the terminal
-	# - Checks that for integer presence
-	# - Then runs the prime finder method
-	# - Then runs the method that builds unique combos
-	# - Finally tests combos against secret() for additive
+	# - Checks that for integer presence #check_integer_input
+	# - Then runs the prime finder method #find_primes_less_than(n)
+	# - Then runs the method that builds unique combos #find_prime_combos
+	# - Finally tests combos against <tt>secret()</tt> #check_if_additive for additive #test_prime_combos_for_additive
 	def initialize
 		puts "Please input integer that primes will not exceed"
 		print ">>"
@@ -23,7 +23,7 @@ class FindsIfAdditive
 		test_prime_combos_for_additive
 	end
 
-	# Performs simple check to make sure the user is inputting only integers
+	# Performs simple check to make sure the user is inputting only integers.
 	def check_integer_input
 		until @n != nil do
 			puts "Please, just integers"
@@ -32,24 +32,25 @@ class FindsIfAdditive
 		end
 	end
 
-	# Runs the Prime module and saves as array to var @list_of_primes
+	# Runs the Prime module and saves as an array to variable <tt>@list_of_primes</tt>.
 	def find_primes_less_than(n)
 		puts "Finding primes less than #{@n}."
 		@list_of_primes = Prime.each(n).to_a
 		puts "Done"
 	end
 
-	# Finds combinations of primes from @list_of_primes
-	# Uses built-in ruby method .combination which finds all unique combos of an array
+	# Finds combinations of primes from <tt>@list_of_primes</tt>.
+	# Uses built-in ruby method <tt>.combination</tt> which finds all unique combos of an array.
 	def find_prime_combos
 		puts "Finding all unique combinations of primes."
 		@prime_combos = @list_of_primes.combination(2).to_a
 		puts "Done"
 	end
 
-	# Compares if additive passing two int (from test_prime_combos_for_additive)
-	# As long as each check remains true, program continues onto next check with next combo
-	# Upon first false - program informs user which prime combo failed and terminates
+	# Checks if <tt>secret()</tt> is additive.
+	# Passes two integers from #test_prime_combos_for_additive.
+	# As long as each check remains true, program continues onto next check with next combo.
+	# Upon first false - program informs user which prime combo failed and terminates.
 	def check_if_additive(x, y)
 		unless secret(x+y) == secret(x) + secret(y)
 			puts "Uh oh"
@@ -58,10 +59,10 @@ class FindsIfAdditive
 		end
 	end
 
-	# For each prime combo - runs check_if_additive
-	# Passes in both values in the combo
-	# Saves iteration for error message in check_if_additive
-	# If all checks pass - success message displays and program terminates
+	# For each prime combo - runs #check_if_additive.
+	# Passes in both values in the combo.
+	# Saves iteration for error message in #check_if_additive.
+	# If all checks pass - success message displays and program terminates.
 	def test_prime_combos_for_additive
 		puts "Now checking whether the secret function is additive."
 		@prime_combos.each do |a|

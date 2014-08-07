@@ -144,13 +144,19 @@
 <ul><li>
 <p>First gets input from the terminal</p>
 </li><li>
-<p>Checks that for integer presence</p>
+<p>Checks that for integer presence <a
+href="FindsIfAdditive.html#method-i-check_integer_input">check_integer_input</a></p>
 </li><li>
-<p>Then runs the prime finder method</p>
+<p>Then runs the prime finder method <a
+href="FindsIfAdditive.html#method-i-find_primes_less_than">find_primes_less_than(n)</a></p>
 </li><li>
-<p>Then runs the method that builds unique combos</p>
+<p>Then runs the method that builds unique combos <a
+href="FindsIfAdditive.html#method-i-find_prime_combos">find_prime_combos</a></p>
 </li><li>
-<p>Finally tests combos against secret() for additive</p>
+<p>Finally tests combos against <code>secret()</code> <a
+href="FindsIfAdditive.html#method-i-check_if_additive">check_if_additive</a>
+for additive <a
+href="FindsIfAdditive.html#method-i-test_prime_combos_for_additive">test_prime_combos_for_additive</a></p>
 </li></ul>
           
           
@@ -198,17 +204,17 @@
 
         <div class="method-description">
           
-          <p>Compares if additive passing two int (from <a
-href="FindsIfAdditive.html#method-i-test_prime_combos_for_additive">#test_prime_combos_for_additive</a>)
+          <p>Checks if <code>secret()</code> is additive. Passes two integers from <a
+href="FindsIfAdditive.html#method-i-test_prime_combos_for_additive">test_prime_combos_for_additive</a>.
 As long as each check remains true, program continues onto next check with
-next combo Upon first false - program informs user which prime combo failed
-and terminates</p>
+next combo. Upon first false - program informs user which prime combo
+failed and terminates.</p>
           
           
 
           
           <div class="method-source-code" id="check_if_additive-source">
-            <pre><span class="ruby-comment"># File additive_prime.rb, line 53</span>
+            <pre><span class="ruby-comment"># File additive_prime.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">check_if_additive</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
         <span class="ruby-keyword">unless</span> <span class="ruby-identifier">secret</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-identifier">y</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">secret</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">secret</span>(<span class="ruby-identifier">y</span>)
                 <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Uh oh&quot;</span>
@@ -239,7 +245,7 @@ and terminates</p>
 
         <div class="method-description">
           
-          <p>Performs simple check to make sure the user is inputting only integers</p>
+          <p>Performs simple check to make sure the user is inputting only integers.</p>
           
           
 
@@ -276,8 +282,9 @@ and terminates</p>
 
         <div class="method-description">
           
-          <p>Finds combinations of primes from @list_of_primes Uses built-in ruby method
-.combination which finds all unique combos of an array</p>
+          <p>Finds combinations of primes from <code>@list_of_primes</code>. Uses
+built-in ruby method <code>.combination</code> which finds all unique
+combos of an array.</p>
           
           
 
@@ -312,7 +319,8 @@ and terminates</p>
 
         <div class="method-description">
           
-          <p>Runs the Prime module and saves as array to var @list_of_primes</p>
+          <p>Runs the Prime module and saves as an array to variable
+<code>@list_of_primes</code>.</p>
           
           
 
@@ -348,16 +356,16 @@ and terminates</p>
         <div class="method-description">
           
           <p>For each prime combo - runs <a
-href="FindsIfAdditive.html#method-i-check_if_additive">#check_if_additive</a>
-Passes in both values in the combo Saves iteration for error message in <a
-href="FindsIfAdditive.html#method-i-check_if_additive">#check_if_additive</a>
-If all checks pass - success message displays and program terminates</p>
+href="FindsIfAdditive.html#method-i-check_if_additive">check_if_additive</a>.
+Passes in both values in the combo. Saves iteration for error message in <a
+href="FindsIfAdditive.html#method-i-check_if_additive">check_if_additive</a>.
+If all checks pass - success message displays and program terminates.</p>
           
           
 
           
           <div class="method-source-code" id="test_prime_combos_for_additive-source">
-            <pre><span class="ruby-comment"># File additive_prime.rb, line 65</span>
+            <pre><span class="ruby-comment"># File additive_prime.rb, line 66</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_prime_combos_for_additive</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Now checking whether the secret function is additive.&quot;</span>
         <span class="ruby-ivar">@prime_combos</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
