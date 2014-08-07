@@ -9,16 +9,28 @@ require_relative 'secret_function' # imports secret function black box
 class FindsIfAdditive
 	# Upon creation of class instance:
 	#   First gets input from the terminal
+	#   Checks that for integer presence
 	#   Then runs the prime finder method
-	#   Then runs the method that checks for unique combos
-	#   Finally tests for additive
+	#   Then runs the method that builds unique combos
+	#   Finally tests combos for additive
 	def initialize
 		puts "Please input integer that primes will not exceed"
 		print ">>"
-		@n = gets.chomp.to_i
+		@n = Integer(gets.chomp) rescue nil
+		check_integer_input
 		find_primes_less_than(@n)
 		find_prime_combos
 		test_prime_combos_for_additive
+	end
+
+	# Performs simple check to make sure the user is inputting
+	#   only integers
+	def check_integer_input
+		until @n != nil do
+			puts "Please, just integers"
+			print ">>"
+			@n = Integer(gets.chomp) rescue nil
+		end
 	end
 
 	# Runs the Prime module and saves as array to var @list_of_primes
