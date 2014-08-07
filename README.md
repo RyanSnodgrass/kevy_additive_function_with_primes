@@ -20,12 +20,12 @@ Built for a job interview code test.
 Implementation
 ==========
 ###Switch Between `secret()` Functions
-In my program the `secret()` function is in a seperate file appropriately labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of `additive_prime.rb` and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
+In my program the `secret()` function is in a separate file appropriately labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of `additive_prime.rb` and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
 
 ####Development
 For my part a lot of my work was cut out for me. Ruby comes with built-in support for prime number finding and factoring. That saved me a lot of time. 
 
-Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I were to check if `f(x+y) == f(x) + f(y)`, it didnt matter which order the digits went in. For that reason I didn't want to waste memory brute-force checking each combination over and over. 
+Early versions of the program had nested while statements building prime number combinations. Basic math says `1 + 2` is the same thing as `2 + 1`. So if I were to check if `f(x+y) == f(x) + f(y)`, it didn't matter which order the digits went in. For that reason I didn't want to waste memory brute-force checking each combination over and over. 
 
 For example I didn't want
 ```ruby
