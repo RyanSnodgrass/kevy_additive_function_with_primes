@@ -74,7 +74,7 @@ And that method returns the same thing, but with only 1 line of code instead of 
 
 -------
 
-A little bit of extra I put in: upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass when they aren't simple `y = mx` functions. Supposedly there are mathematicians out there studying non linear additive functions.
+A little bit of extra I put in: upon `secret()` failing additive test, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass when they aren't simple `y = mx` functions. Supposedly there are mathematicians out there studying non linear additive functions.
 
 Documentation
 -----------
