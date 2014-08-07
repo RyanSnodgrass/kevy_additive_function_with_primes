@@ -19,7 +19,7 @@ Built for a job interview code test.
 
 Implementation
 ==========
-In my program the 'secret()' function is in a seperate file labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of additive_prime.rb and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
+In my program the 'secret()' function is in a seperate file appropriately labeled `secret_function.rb`.  There are actually 2 functions in that file. One is a perfectly linear additive function and the other is not. Both are very simple `y = mx + b` slope-intercept algebra functions. To call either one you need to rewrite your copy of additive_prime.rb and where it says `secret()` change to `so_totally_not_secret()` in the `check_if_additive` method.
 
 --------
 
@@ -74,7 +74,7 @@ And that method returns the same thing, but with only 1 line of code instead of 
 
 -------
 
-A little bit of extra I put in is upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass and aren't simple `y = mx` functions. Supposedly there are super smarty-pants mathematicians out there searching for non linear additive functions.
+A little bit of extra I put in is upon `secret()` failing, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass and aren't simple `y = mx` functions. Supposedly there are mathematicians out there searching for non linear additive functions.
 
 Documentation
 -----------
