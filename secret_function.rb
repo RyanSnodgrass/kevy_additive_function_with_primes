@@ -1,5 +1,5 @@
-def secret(sauce)
-	sauce * 7
+def secret(diary)
+	diary * 7
 end
 
 def so_totally_not_secret(as_if)
