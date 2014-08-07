@@ -70,11 +70,60 @@ Then I found the `.combination()` method.
 ```ruby
 combos = array.combination(2).to_a
 ```
-And that method returns the same thing, but with only 1 line of code instead of 9. Love it.
+Which returns
+```
+[[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+```
+The same thing, but with only 1 line of code instead of 9. Love it.
 
--------
+------
 
-A little bit of extra I put in: upon `secret()` failing additive test, the program will tell you which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass when they aren't simple `y = mx` functions. Supposedly there are mathematicians out there studying non linear additive functions.
+With the early code manually checking for combos, I had the additive check put in the middle of the block as it finds those combos.
+```ruby
+	def find_if_additive(x, y)
+		unless secret(x+y) == secret(x) + secret(y)
+			abort("The secret method is NOT additive")
+		end
+	end
+
+	def find_prime_combos
+		a = 0
+		while a < @list_of_primes.length do
+			b = a + 1
+			until b == @list_of_primes.length do
+				find_if_additive(@list_of_primes[a], @list_of_primes[b])
+				b += 1
+			end
+			a += 1
+		end
+	end
+```
+Which is nice and it works, but the `.combination` method reduces a lot of that. After a bit of refactoring I had to break the combo finder into its own method.
+```ruby
+	def find_prime_combos
+		@prime_combos = @list_of_primes.combination(2).to_a
+	end
+```
+And then iterate over the `@prime_combos` array to `check_if_additive`. The result is much cleaner and I think even a little faster because of the built in methods.
+```ruby
+	def test_prime_combos_for_additive
+		@prime_combos.each do |a|
+			@iteration = a
+			check_if_additive(a[0], a[1])
+		end
+	end
+```
+
+I put in a little bit of extra in the above. During each check, the current combo block is saved to the `@iteration` variable. If the check fails:
+```ruby
+	def check_if_additive(x, y)
+		unless secret(x+y) == secret(x) + secret(y)
+			puts "For prime combo #{@iteration.join(" and ")}"
+			abort("The secret method has been proven NOT additive.")
+		end
+	end
+```
+The output string displays which combo block broke it. For now, since both functions are so simple- it's always the first one. Feel free to try your own functions in the `secret()` method and let me know if they pass when they aren't simple `y = mx` functions. 
 
 Documentation
 -----------
