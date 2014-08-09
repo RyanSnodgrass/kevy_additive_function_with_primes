@@ -52,7 +52,7 @@ class FindsIfAdditive
 	# As long as each check remains true, program continues onto next check with next combo.
 	# Upon first false - program informs user which prime combo failed and terminates.
 	def check_if_additive(x, y)
-		unless secret(x+y) == secret(x) + secret(y)
+		unless secret(x + y) == secret(x) + secret(y)
 			puts "Uh oh"
 			puts "For prime combo #{@iteration.join(" and ")}"
 			abort("The secret method has been proven NOT additive.")
