@@ -26,9 +26,14 @@ The key difference between these apps and Kevy is the first glance complexity fr
 
 Recent Innovations In Cloud Integration
 ------
-Not necessarily an innovation, but certainly good news: according to an article at [www.idevnews.com](http://www.idevnews.com/stories/6179/Survey-Increases-in-SaaS-Adoption-Fuel-Growth-Interest-in-iPaaS-Cloud-Integration) dated May 5th this year
+Only in the last two years has the term Integration Platform as a Service existed. In an article published by Gartner in early 2012: a new service was outlined that we know now as iPaaS. You have to be a memeber of Gartner to view the original document, but Information Week has an [article](http://www.informationweek.com/cloud/platform-as-a-service/meet-ipaas-gartner-ranks-new-cloud-service-pioneers/d/d-id/1113882) dated 2/19/2012 outlining the report.
 
-http://cloudcomputing.sys-con.com/node/2914476
+Not necessarily an innovation, but certainly good news: according to an article at [www.idevnews.com](http://www.idevnews.com/stories/6179/Survey-Increases-in-SaaS-Adoption-Fuel-Growth-Interest-in-iPaaS-Cloud-Integration) dated May 5th this year states that a survey done by SnapLogic finds that more and more medium to large firms are looking to move towards SaaS products which will only fuel more interest in iPaaS providers to keep costs down. However, this interest also brings concerns about data-privacy and security.
+
+Cloud Computing Journal has an [article](http://cloudcomputing.sys-con.com/node/2914476) dated 1/6/2014 that says customization will become the new hot topic for 2014.
+>Liaison predicts that in 2014 there will be dramatic growth in data integration complexity, mass customization will become the norm and the convergence of business-to-business (B2B) and application-to-application (A2A) integration will be a top priority.
+
+This seems to be at odds to Kevy's niche to keep everything pre-built for the clients. If Kevy is prebuilding all their options so they can just point and click on what has already been built, how custom can Kevy's product be? The client would have to contact Kevy for any new connections or features not present.
 
 Who Would benefit from Kevy?
 ------
