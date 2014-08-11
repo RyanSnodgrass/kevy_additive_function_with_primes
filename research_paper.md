@@ -8,12 +8,12 @@ Cloud computing has become a very hot topic in recent years. For many the term r
 >- PaaS is the set of tools and services designed to make coding and deploying those applications quick and efficient 
 >- IaaS is the hardware and software that powers it all – servers, storage, networks, operating systems
 
-All these services are running over the internet, or the "cloud." Kevy comes in underneath the SaaS layer, but, between the PaaS. Kevy actually provides a great video that explains this on their ['Meet Kevy'](http://kevy.com/resources#videos) video.
+All these services are running over the internet, or the "cloud." With so many cloud apps, having them play nice with each other is often time consuming and costly. Kevy provides a pre-built integration between all of a client's favorite cloud based applications that takes data from one application and turns it into something usable for the other application. Kevy comes in underneath the SaaS layer, but, between the PaaS. Kevy provides a great introduction to this on their ['Meet Kevy'](http://kevy.com/resources#videos) video.
 
 Who Are Kevy's Competitors And How Do They Differentiate?
 --------
 
-Currently there are a handful of mammoth services with large budgets and many integrations. The bigger ones are made by well known names like Dell, Microsoft, and Amazon. There are many players in the cloud integration market. Wikipedia has a list of popular integration platforms totaling 29 different providers. Kevy was not listed.
+Currently there are a handful of mammoth services with large budgets and many integrations. The bigger ones are made by well known names like Dell, Microsoft, and Amazon. There are many players in the cloud integration market. Wikipedia has a [list](http://en.wikipedia.org/wiki/Cloud-based_integration#Significant_Players) of popular integration platforms totaling 29 different providers. (Kevy was not listed.)
 
 ####MuleSoft
 One of the big names in cloud integration. Mulesoft is different by being a small company under 500 that delivers on SaaS, PaaS, and iPaaS. They have many vendors and break them down into those categories.
@@ -21,8 +21,10 @@ One of the big names in cloud integration. Mulesoft is different by being a smal
 ####Boomi Atomsphere
 Now by Dell. Boomi Atomsphere is one of the leaders in the market and according to this [artice](http://cloudcomputing.sys-con.com/node/1614705) dated 2010 one of the first Platform as a Service providers to market. Featuring three products now- prebuilt integrations, API access to the integration, and custom coded solutions.
 
+####Informatica
+Offering Enterprise level integrations. In 2012 they were named the #1 best selling integration platform for 4 years running found [here](http://www.informaticacloud.com/company/news/press-releases/389-informatica-receives-integration-appexchange-best-of-11-award-from-salesforcecom-customers.html). In an 'independent' [review](http://sellmorenow.com/crm-review/informatica/) Informatica was found to have introduced the industry’s first usage-based data integration service, Informatica Cloud Express, in its Winter 2010 Release. Informatica Cloud Express allows users to easily schedule data loading tasks between databases/files and CRM, all without coding.
 
-The key difference between these apps and Kevy is the first glance complexity from these companies. Gleaning just from their websites shows a plethora of features with obvious power. But, with that power comes complexity. From a couple of articles and blog posts comes a common consensus toward lack of developer support.  Meaning many of these products expect their customers to have in house developers to hook into the cloud integration service.
+The key difference between these apps and Kevy is the first glance complexity from these companies. Gleaning just from their websites shows a plethora of features with obvious power. But, with that power comes complexity. From a couple of articles and blog posts comes a common consensus toward lack of developer support.  Meaning many of these products expect their clients to have in house developers to hook into the cloud integration service.
 
 Recent Innovations In Cloud Integration
 ------
